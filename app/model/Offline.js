@@ -1,9 +1,8 @@
 /**
- * Created with IntelliJ IDEA.
- * User: kehoro
+ * User: Robert Kehoe
  * Date: 22/11/12
  * Time: 20:22
- * To change this template use File | Settings | File Templates.
+ * Use Sencha Touch inbuilt WebStorage API to persist data to the users browser
  */
 
 Ext.define('default.model.Offline', {
@@ -12,7 +11,7 @@ Ext.define('default.model.Offline', {
     fields: [
       'name'
     ],
-    identifier:'uuid', // needed to avoid console warnings!
+    identifier:'uuid', // IMPORTANT, needed to avoid console warnings!
     proxy: {
       type: 'localstorage',
       id  : 'news'
