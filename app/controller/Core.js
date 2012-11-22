@@ -55,7 +55,6 @@ Ext.define('default.controller.Core', {
      * the fallback / local stoage store instead
      */
     onlineStore.getProxy().on('exception', function () {
-      console.log(me.getNewsList());
       me.getNewsList().setStore(localStore); //rebind the view to the local store
       localStore.load(); // This causes the "loading" mask to disappear
       Ext.Msg.alert('Notice', 'You are in offline mode', Ext.emptyFn); //alert the user that they are in offline mode
