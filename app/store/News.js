@@ -1,9 +1,8 @@
 /**
- * Created with IntelliJ IDEA.
- * User: kehoro
+ * User: Robert Kehoe
  * Date: 22/11/12
  * Time: 20:35
- * To change this template use File | Settings | File Templates.
+ * Online store to store retrieve and manage data
  */
 
 Ext.define('default.store.News', {
