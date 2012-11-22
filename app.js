@@ -1,3 +1,21 @@
+/**
+ * User: Robert Kehoe
+ * Date: 22/11/12
+ * Time: 20:21
+ *
+ * A sample application to demonstrate how localstorage can work in Sencha Touch 2.1 applications to provide
+ * a fallback / offline mode for mobile applications.
+ * Works for mobile browsers (example: Safari) and for PhoneGap apps (Cordova).
+ * Note: There is a known issue in iOS 5.1 that prevents localstorage from working. This is an iOS / Apple issue.
+ *
+ * Most of this code is just boiler plate stuff. The more interesting code is in:
+ *  - app/controller/core.js
+ *  - app/model/Offline.js
+ *  - app/store/News.js
+ *
+ * A more detailed explanation is available at: http://www.robertkehoe.com/2012/11/sencha-touch-2-localstorage-example/
+ */
+
 //<debug>
 Ext.Loader.setPath({
     'Ext': 'touch/src',
