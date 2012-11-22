@@ -1,9 +1,11 @@
 /**
- * Created with IntelliJ IDEA.
- * User: kehoro
+ * User: Robert Kehoe
  * Date: 22/11/12
  * Time: 21:33
- * To change this template use File | Settings | File Templates.
+ * Simple example controller to show how:
+ *  - Add listener to the Oneline store to check for Store load() events, in order to copy the online data
+ *  - Add listener to the Online Proxy to check for exceptions
+ *  - Rebinds the view (newList) from the Online Store to the Offline store if an exception is thrown
  */
 
 Ext.define('default.controller.Core', {
@@ -15,6 +17,9 @@ Ext.define('default.controller.Core', {
     }
   },
 
+  /**
+   * Sencha Touch always calls this function as part of the bootstrap process
+   */
   init : function () {
     var onlineStore = Ext.getStore('News'),
       localStore = Ext.create('Ext.data.Store', {
@@ -38,7 +43,6 @@ Ext.define('default.controller.Core', {
         var rec = {
           name : record.data.name + ' (from localStorage)' // in a real app you would not update a real field like this!
         };
-
 
         localStore.add(rec);
         localStore.sync();
